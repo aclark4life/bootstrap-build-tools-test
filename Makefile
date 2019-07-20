@@ -404,9 +404,9 @@ pack: webpack  # Alias
 
 
 # Bootstrap
-build:
+bootstrap-install:
 	pushd bootstrap-4.3.1; npm install node-sass; npm install; bundle install; popd
 dist:
 	pushd bootstrap-4.3.1; npm run dist
-docs:
+docs-serve:
 	pushd bootstrap-4.3.1; npm run docs-serve

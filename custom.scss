@@ -1,6 +1,12 @@
-// Your variable overrides
-$body-bg: #fff;
-$body-color: #111;
+// https://stackoverflow.com/a/49070142
+/* custom.scss */    
 
-// Bootstrap and its default variables
-@import "node_modules/bootstrap/scss/bootstrap";
+/* import the necessary Bootstrap files */
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+
+/* make changes to the !default Bootstrap variables */    
+$body-color: green;
+
+/* finally, import Bootstrap to set the changes! */
+@import "bootstrap";
