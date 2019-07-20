@@ -401,3 +401,11 @@ webpack-init:
 webpack:
 	./node_modules/.bin/webpack
 pack: webpack  # Alias
+
+
+# Bootstrap build
+bootstrap-build:
+	npm install node-sass
+	npm install
+	bundle install
+	npm run dist
