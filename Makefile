@@ -403,8 +403,6 @@ webpack:
 pack: webpack  # Alias
 
 
-# Bootstrap build
-bootstrap-build:
+# Bootstrap
+build:
 	pushd bootstrap-4.3.1; npm install node-sass npm install bundle install npm run dist; popd
-	$(MAKE) git-commit-auto-push
-.DEFAULT_GOAL=bootstrap-build
