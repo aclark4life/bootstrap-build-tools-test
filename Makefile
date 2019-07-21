@@ -405,5 +405,5 @@ pack: webpack  # Alias
 
 # bootstrap-custom
 build:
-	npm run build
+	-npm run build
 	open index.html
