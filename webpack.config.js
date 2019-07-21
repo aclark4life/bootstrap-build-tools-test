@@ -1,41 +1,29 @@
-const path = require('path');
-
+const precss = require('precss');
+const autoprefixer = require('autoprefixer');
 module.exports = {
   entry: './index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
   },
   module: {
-    rules: [
-      {
-        test: /\.(scss)$/,
-        use: [
-          {
-            // Adds CSS to the DOM by injecting a `<style>` tag
-            loader: 'style-loader'
+    rules: [{
+      test: /\.scss$/,
+      use: [
+        { loader: 'style-loader' },
+        { loader: 'css-loader' },
+        {
+          loader: 'postcss-loader',
+          options: {
+            plugins() {
+              return [
+                precss,
+                autoprefixer,
+              ];
+            },
           },
-          {
-            // Interprets `@import` and `url()` like `import/require()` and will resolve them
-            loader: 'css-loader'
-          },
-          {
-            // Loader for webpack to process CSS with PostCSS
-            loader: 'postcss-loader',
-            options: {
-              plugins: function () {
-                return [
-                  require('autoprefixer')
-                ];
-              }
-            }
-          },
-          {
-            // Loads a SASS/SCSS file and compiles it to CSS
-            loader: 'sass-loader'
-          }
-        ]
-      }
-    ]
-  }
+        },
+        { loader: 'sass-loader' },
+      ],
+    }],
+  },
 };

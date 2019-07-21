@@ -1,0 +1,12 @@
+// https://stackoverflow.com/a/49070142
+/* custom.scss */    
+
+/* import the necessary Bootstrap files */
+import "node_modules/bootstrap/functions";
+import "node_modules/bootstrap/variables";
+
+/* make changes to the !default Bootstrap variables */    
+$body-color: green;
+
+/* finally, import Bootstrap to set the changes! */
+import "node_modules/bootstrap";
