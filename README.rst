@@ -37,4 +37,4 @@ Issues
 
 - ``_custom.scss`` is confusing, https://github.com/twbs/bootstrap/issues/22891
 - JavaScript ``import`` is confusing, https://stackoverflow.com/a/27984975/185820
-- Webpack is complex, https://webpack.js.org/concepts
+- Webpack is confusing, https://webpack.js.org/concepts
