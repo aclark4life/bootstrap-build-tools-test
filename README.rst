@@ -26,3 +26,10 @@ Installation
     cd bootstrap-custom
     npm install
     make pack
+
+
+Issues
+------
+
+- ``_custom.scss`` is confusing, https://github.com/twbs/bootstrap/issues/22891
+- JS import is confusing, https://stackoverflow.com/a/27984975/185820
