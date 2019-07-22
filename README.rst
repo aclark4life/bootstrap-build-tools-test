@@ -31,7 +31,7 @@ Installation
 Issues
 ------
 
-.. blockquote:: 
+::
 
     "Everything is confusing."
     
