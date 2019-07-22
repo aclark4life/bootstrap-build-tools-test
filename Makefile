@@ -401,9 +401,3 @@ webpack-init:
 webpack:
 	./node_modules/.bin/webpack
 pack: webpack  # Alias
-
-
-# bootstrap-custom
-build:
-	npm run build
-	open index.html
