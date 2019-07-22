@@ -10,8 +10,8 @@ Thank you!
 Screenshot
 ----------
 
-.. image:: screenshot.png
+.. image:: screenshot2.png
 
 |
 
-.. image:: screenshot2.png
+.. image:: screenshot.png
