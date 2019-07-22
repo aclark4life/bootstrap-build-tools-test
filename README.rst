@@ -7,8 +7,8 @@ Based on:
 
 Thank you!
 
-Screenshot
-----------
+Screenshots
+-----------
 
 .. image:: screenshot2.png
 
