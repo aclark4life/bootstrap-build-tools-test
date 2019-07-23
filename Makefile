@@ -83,8 +83,11 @@ REMOTES=`\
 #
 # "Multi-target Alias" - Like an "Alias", but with multiple targets.
 #
+# "BBB" - For backwards compatibility.
 
 #-------------------------------------------------------------------------------
+
+# Targets
 
 # ABlog
 ablog: ablog-clean ablog-install ablog-init ablog-build ablog-serve  # Multi-target Alias
@@ -183,10 +186,13 @@ git-push:
 	git push
 git-push-up:
 	git push --set-upstream origin master
-git-commit-push: git-commit git-push  # Multi-target Alias
-git-commit-auto-push: git-commit-push  # BBB
-cp: git-commit-push  # Alias 
-commit-push: git-commit-push  # Alias
+commit: git-commit  # Alias
+c: commit  # Alias
+cp: commit-push  # Alias
+push: git-push  # Alias
+p: push  # Alias
+commit-push: git-commit git-push  # Multi-target Alias
+git-commit-auto-push: commit-push  # BBB
 
 # Grunt
 grunt: grunt-init grunt-serve
@@ -271,25 +277,6 @@ pip-upgrade:
 	mv -f $(TMPDIR)/requirements.txt .
 	pip install -U -r requirements.txt
 	$(MAKE) pip-freeze
-
-# Plone
-plone: plone-install plone-init plone-serve  # Multi-target Alias
-plone-heroku:
-	-@createuser -s plone > /dev/null 2>&1
-	-@createdb -U plone plone > /dev/null 2>&1
-	@export PORT=8080 && \
-		export USERNAME=admin && \
-		export PASSWORD=admin && \
-		buildout -c heroku.cfg
-plone-install:
-	@echo plock > requirements.txt
-	@$(MAKE) python-virtualenv
-	@$(MAKE) python-install
-plone-init:
-	plock --force --no-cache --no-virtualenv .
-plone-serve:
-	@echo "\n\tServing HTTP on http://0.0.0.0:8080\n"
-	@plone fg
 
 # Python
 lint: python-lint  # Alias
