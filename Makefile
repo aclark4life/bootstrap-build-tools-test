@@ -419,5 +419,5 @@ pack: webpack  # Alias
 #-------------------------------------------------------------------------------
 
 # Custom
-.DEFAULT_GOAL=npm-install
+.DEFAULT_GOAL=cp
 install: npm-install
