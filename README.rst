@@ -24,7 +24,7 @@ Installation
 
     git clone git@github.com:aclark4life/bootstrap-custom.git
     cd bootstrap-custom
-    npm install
+    make install
     make pack
 
 
