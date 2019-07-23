@@ -26,6 +26,7 @@ Installation
     cd bootstrap-custom
     make install
     make pack
+    make serve
 
 
 Issues
